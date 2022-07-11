@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="index.js"></script>
+  <title>Employee Input Form</title>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <h1 id="finalMessage">Thank You</h1>
+    <form id="form" name="form" method="post" onsubmit="return false">
+      <h2 class="title">Employee Input Form</h2>
+      <table>
+        <tr>
+          <td><label for="firstName">First Name <abbr aria-label="required">*</abbr></label></td>
+          <td><input id="firstName" type="text" name="firstName" placeholder="First Name" required autofocus /></td>
+        </tr>
+
+        <tr>
+          <td><label for="lastName">Last Name <abbr aria-label="required">*</abbr></label></td>
+          <td><input id="lastName" type="text" name="lastName" placeholder="Last Name" required /></td>
+        </tr>
+
+        <tr class="gender">
+          <td><label for="gender">Gender <abbr aria-label="required">*</abbr></label></td>
+          <td>
+            <p>
+              <input type="radio" name="gender" id="male" value="male" required>
+              <label for="male">MALE</label>
+            </p>
+            <p>
+              <input type="radio" name="gender" id="female" value="female">
+              <label for="female">FEMALE</label>
+            </p>
+          </td>
+        </tr>
+
+        <tr class="maritalStatus">
+          <td><label for="maritalStatus">Marital Status <abbr aria-label="required">*</abbr></label></td>
+          <td>
+            <p>
+              <input type="radio" name="maritalStatus" id="married" value="married" onclick="spouseVisibility()"
+                required>
+              <label for="married">Married</label>
+            </p>
+            <p>
+              <input type="radio" name="maritalStatus" id="unmarried" onclick="spouseVisibility()" value="unmarried">
+              <label for="unmarried">Unmarried</label>
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="spouseName">Name of Spouse <abbr aria-label="required">*</abbr></label></td>
+          <td><input id="spouseName" type="text" name="spouseName" placeholder="Spouse Name" disabled /></td>
+        </tr>
+
+        <tr>
+          <td><label for="otherDetails">Other Details<abbr aria-label="required">*</abbr></label></td>
+          <td><textarea id="otherDetails" type="text" name="otherDetails" placeholder="Enter Details"></textarea></td>
+        </tr>
+      </table>
+
+      <div>
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms">I accept<a href="#">Terms and Conditions</a></label>
+      </div>
+
+      <div>
+        <button type="reset" id="reset">Reset</button>
+        <button type="submit" onclick="return validateForm()" id="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
