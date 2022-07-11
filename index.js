@@ -24,11 +24,13 @@ function validateForm() {
   const emptyFields = [];
   const whiteSpaces = [];
 
-  if (firstName.length == 0) emptyFields.push("First Name");
-  if (lastName.length == 0) emptyFields.push("Last Name");
-  if (gender.length == 0) emptyFields.push("Gender");
-  if (maritalStatus.length == 0) emptyFields.push("Marital Status");
-  if (otherDetails.length == 0) emptyFields.push("Other Details");
+  if (firstName.length === 0) emptyFields.push("First Name");
+  if (lastName.length === 0) emptyFields.push("Last Name");
+  if (gender.length === 0) emptyFields.push("Gender");
+  if (maritalStatus.length === 0) emptyFields.push("Marital Status");
+  if (otherDetails.length === 0) emptyFields.push("Other Details");
+  if (maritalStatus === "married" && spouseName.length === 0)
+    emptyFields.push("Spouse Name");
 
   if (hasWhiteSpace(firstName)) whiteSpaces.push("First Name");
   if (hasWhiteSpace(lastName)) whiteSpaces.push("Last Name");
