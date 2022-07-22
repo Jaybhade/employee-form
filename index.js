@@ -9,6 +9,7 @@ function spouseVisibility() {
     document.getElementById("spouseName").disabled = false;
   } else {
     document.getElementById("spouseName").disabled = true;
+    document.form.spouseName.value = "";
   }
 }
 
