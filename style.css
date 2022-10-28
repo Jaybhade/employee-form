@@ -81,14 +81,6 @@ input:focus {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* input:invalid {
-  border: 2px solid red;
-}
-
-input:invalid:required {
-  border: 2px solid red;
-} */
-
 input:valid {
   border: 2px solid green;
 }
